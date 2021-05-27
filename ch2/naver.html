@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- head는 해당 문서에 대한 부가적인 정보를 담고있습니다. 제목, favicon... -->
+    <meta charset="UTF-8" />
+    <!--  meta태그는 닫는 태그 없어도 동작은 함 하지만 닫는 태그 있는게 좋다.-->
+    <title>내가만든 NAVER</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.naver.com/favicon.ico?1" />
+    <!-- 해당 페이지 이미지가 없어도 sources에서 다 가져올 수 있음 -->
+
+</head>
+
+<body>
+    <!-- body는 메인을 담당 -->
+    <header>
+        <!-- 가로 구역 1 : header 검색창 부분 -->
+        <h1>
+            <a href="https://www.naver.com">네이버</a>
+        </h1>
+        <a href="#">네이버를 시작페이지로</a>&nbsp;<a href="#">쥬니어네이버</a>&nbsp;<a href="#">해피빈</a>
+        <fieldset>
+            <!-- 검색창 만들때 쓰는 태그. 정해진것은 아니고 다르게 사용해도 됩니다. -->
+            <legend>검색</legend>
+            <select>
+                <option>통합검색</option>
+                <option>블로그</option>
+                <option>카페</option>
+
+            </select><br />
+            <input type="text" placeholder="검색어를 입력해 주세요" /><br />
+            <button>검색</button>
+        </fieldset>
+    </header>
+    <nav>
+        <!-- 가로구역 2 : 카테고리 네비게이션 부분  -->
+        <ul>
+            <!-- <ul> :  unordered list  <ol> : ordered list-->
+            <li>메일</li> <!-- list item -->
+            <li>카페</li>
+            <li>블로그</li>
+            <li>지식iN</li>
+            <li>쇼핑</li>
+            <li>쇼핑LIVE</li>
+            <li>Play</li>
+            <li>TV</li>
+            <br />
+
+            <li>사전</li>
+            <li>뉴스</li>
+            <li>증권</li>
+            <li>부동산</li>
+            <li>지도</li>
+            <li>VIBE</li>
+            <li>책</li>
+            <li>웹툰</li>
+        </ul>
+    </nav>
+    <main>
+        <!-- 가로구역3 : 메인 컨텐츠 -->
+        <h2>뉴스스탠드</h2>
+
+
+        <a href="#">
+            <!-- img는 alt 라는 속성으로 설명을 달아줄 수 있습니다.(시각장애인을 위한)-->
+            <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/003.png" alt="뉴시스_로고" /><br />
+        </a>
+
+        <a href="#" role="button">구독</a>
+        <a href="http://newsstand.naver.com/?list=&amp;pcode=015" role="button">기사보기</a>
+
+
+        <a href="#">
+            <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/241.png" alt="일간스포츠_로고" /><br />
+        </a>
+
+        <a href="#" role="button">구독</a>
+        <a href="http://newsstand.naver.com/?list=&pcode=241" role="button">기사보기</a>
+
+
+
+
+        <h2>주제별 캐스트</h2>
+
+
+
+        <h2>로그인</h2>
+        <p>네이버를 더 안전하고 편리하게 이용하세요</p>
+        <a href="#">
+            <!-- <i>: 중요한 문구 또는 아이콘 태그라는 뜻   -->
+            <i>네이버로그인</i>
+        </a>
+
+        <h2>타임스퀘어</h2>
+
+
+    </main>
+    <footer>
+        <!--가로구역4: footer -->
+        <h3>Creators</h3>
+        <a href="#">크리에이터</a>
+        <br />
+        <h3>Partners</h3>
+
+        <h3>Developers</h3>
+        <a href="#">네이버 개발자 센터</a>
+        <h2>네이버 정책 및 약관</h2>
+        <a href="#">회사소개</a><br />
+        <a href="#">인재채용</a><br />
+        <a href="#">이용약관</a><br />
+        <a href="#"><strong>개인정보처리방침</strong></a>
+    </footer>
+
+</body>
+
+</html>
