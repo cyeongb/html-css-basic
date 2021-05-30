@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모달창 만들기</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        button {
+            all: unset;
+            background-color: darkorchid;
+            color: yellowgreen;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal {
+            /* 일단 이 modal을 버튼 클릭하면 화면에 띄움, 모달전체 틀!  */
+            /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
+            /* position: absolute; */
+            /* absolute 는 부모의 속성에 따라 바뀔 수 있음*/
+            position: absolute;
+            /*  fixed는 절대적인 위치임. 스크롤해도 그대로.*/
+            /* top: 20%; */
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal_overlay {
+            /* overlay는 뒷배경 */
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .modal_content {
+            position: relative;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            width: 20%;
+            height: 13%;
+            margin: 20% 42%;
+            align-items: center;
+            place-items: center;
+        }
+
+        .modal_title {
+            margin: 10px 20px;
+        }
+
+        .hidden {
+            /* modal을 숨겨주기 위해  modal class 뒤에 hidden class 생성 */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="modalOpen">Modal On!</button>
+    <div class="modal hidden">
+        <div class="modal_overlay">
+            <!-- modal_overlay : 모달창의 깜깜한 뒷 배경 -->
+            <div class="modal_content">
+                <h3 class="modal_title">Modal</h3>
+                <button id="close">❌</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+    <h4>hihi</h4>
+    <script type="text/javascript">
+        // modalOn! 버튼을 클릭하면 창이 hidden되어있던 모달창을 열게끔 구현 
+        const modalOpen = document.getElementById('modalOpen');
+        const modal = document.querySelector(".modal");
+
+        //modal창이 열렸을 떄 , close 버튼 또는 배경을 클릭하면 모달창이 닫히도록 구현 
+        const overlay = modal.querySelector(".modal_overlay");
+        const closeBtn = modal.querySelector("#close");
+
+        // click하면 실행되는 함수
+        const btnClick = () => {
+            modal.classList.remove("hidden");
+        }
+
+        const closeModal = () => {
+            modal.classList.add("hidden");
+        }
+
+        modalOpen.addEventListener('click', btnClick);
+
+        overlay.addEventListener('click', closeModal);
+        closeBtn.addEventListener('click', closeModal);
+
+    </script>
+
+</body>
+
+</html>
