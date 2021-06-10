@@ -1,0 +1,80 @@
+/* css는 조상에 적용된 css가 있고, 자식이 덮어씌우는것.
+html에 적용된 속성이 있으면 그 밑에 div가 덮어씌우고..그렇게 덮어씌워진다.
+*/
+
+#header_center{
+    width:1130px;
+    /* 본인의 화면 해상도에 따라서 상대적인 값이다. 내화면:1920px */
+    margin:0 auto;
+}
+
+
+
+/* 자식 태그 선택하기 
+' > ' 이걸 이용하면 해당 태그의 자식까지 선택할수 있습니다.
+*/
+/* 네이버로고 */
+.header_search {
+    /* position: relative; */
+    top: 10%;
+    left: -9px;
+    margin-top: 32px;
+}
+
+.header_search > h1{
+ /* position: 0 130px; */
+ margin: 0 0;
+ width:222px;
+}
+
+.header_logo{
+    width:222px;
+    display: inline-block;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2021/sp_main_4efc7a.png);  /* 파일경로 또는 이미지 주소*/
+    height: 52px;
+    background-position: 0 -158px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    content: '';
+    background-size: 440px 408px;
+    /* z-index: 1; */
+}
+
+/* 자손 태그 선택하기 
+한 칸 띄우면 자손들(자식의 자식들..) 태그들이  다선택 가능합니다.
+*/
+
+/* #header_search  h1{
+ width:222px; 
+} */
+
+/* 시각장애인용 스크린리더 */
+.blind{
+
+    /* 네이버에서 가져온 css 입니다. */
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* 검색창 */
+#search_window{
+    width:580px;
+    display: inline-block;
+    position: relative;
+    height: 52px;
+    border: 2px solid #19ce60;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    top: 50%;
+    left: 268px;
+    margin-top: -28px;
+}
+
+
+
+
+

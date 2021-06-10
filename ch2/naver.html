@@ -8,29 +8,45 @@
     <title>내가만든 NAVER</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://www.naver.com/favicon.ico?1" />
     <!-- 해당 페이지 이미지가 없어도 sources에서 다 가져올 수 있음 -->
+    <link rel="stylesheet" href="./naver.css" />
 
 </head>
 
 <body>
     <!-- body는 메인을 담당 -->
     <header>
-        <!-- 가로 구역 1 : header 검색창 부분 -->
-        <h1>
-            <a href="https://www.naver.com">네이버</a>
-        </h1>
-        <a href="#">네이버를 시작페이지로</a>&nbsp;<a href="#">쥬니어네이버</a>&nbsp;<a href="#">해피빈</a>
-        <fieldset>
-            <!-- 검색창 만들때 쓰는 태그. 정해진것은 아니고 다르게 사용해도 됩니다. -->
-            <legend>검색</legend>
-            <select>
-                <option>통합검색</option>
-                <option>블로그</option>
-                <option>카페</option>
+        <div id=" header_center" style="margin:0 auto; width:1130px;">
+            <!-- 가운데 정렬용 div -->
+            <!-- 가로 구역 1 : header 검색창 부분 -->
 
-            </select><br />
-            <input type="text" placeholder="검색어를 입력해 주세요" /><br />
-            <button>검색</button>
-        </fieldset>
+            <!-- header에서 또 두부분으로 나눌수 있습니다. header_top , header_search -->
+
+            <div id="header_top">
+                <a href="#">네이버를 시작페이지로</a>&nbsp;<a href="#">쥬니어네이버</a>&nbsp;<a href="#">해피빈</a>
+
+            </div>
+            <div class="header_search">
+                <h1>
+                    <a href="https://www.naver.com" class="header_logo">
+                        <span class="blind">네이버</span>
+                    </a>
+                </h1>
+                <span class="blind">검색창</span><!-- 검색창은 시각장애인용 스크린리더입니다.-->
+                <fieldset id="search_window">
+                    <!-- 검색창 만들때 쓰는 태그. 정해진것은 아니고 다르게 사용해도 됩니다. -->
+                    <legend class="blind">검색</legend>
+                    <select>
+                        <option>통합검색</option>
+                        <option>블로그</option>
+                        <option>카페</option>
+
+                    </select><br />
+                    <input type="text" placeholder="검색어를 입력해 주세요" /><br />
+                    <button>검색</button>
+                </fieldset>
+            </div>
+
+        </div>
     </header>
     <nav>
         <!-- 가로구역 2 : 카테고리 네비게이션 부분  -->
