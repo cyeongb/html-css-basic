@@ -26,23 +26,29 @@
 
             </div>
             <div class="header_search">
-                <h1>
-                    <a href="https://www.naver.com" class="header_logo">
+                <a href="https://www.naver.com" class="header_logo">
+                    <h1>
                         <span class="blind">네이버</span>
-                    </a>
-                </h1>
+                    </h1>
+                </a>
                 <span class="blind">검색창</span><!-- 검색창은 시각장애인용 스크린리더입니다.-->
                 <fieldset id="search_window">
                     <!-- 검색창 만들때 쓰는 태그. 정해진것은 아니고 다르게 사용해도 됩니다. -->
                     <legend class="blind">검색</legend>
-                    <select>
-                        <option>통합검색</option>
+                    <select class="blind">
+                        <option selected="selected">통합검색</option>
                         <option>블로그</option>
                         <option>카페</option>
+                    </select>
 
-                    </select><br />
-                    <input type="text" placeholder="검색어를 입력해 주세요" /><br />
-                    <button>검색</button>
+
+                    <input type="text" title="검색어 입력" class="input_text" placeholder="검색어를 입력해 주세요" />
+
+                    <button class="search_btn">
+
+                        <span class="blind">검색</span>
+                        <span class="ico_search_submit"></span>
+                    </button>
                 </fieldset>
             </div>
 
