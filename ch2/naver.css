@@ -32,6 +32,7 @@ html에 적용된 속성이 있으면 그 밑에 div가 덮어씌우고..그렇�
  width:222px;
 }
 
+/* 메인  네이버 로고 */
 .header_logo{
     width:222px;
     display: inline-block;
@@ -44,6 +45,8 @@ html에 적용된 속성이 있으면 그 밑에 div가 덮어씌우고..그렇�
     background-size: 440px 408px;
     /* z-index: 1; */
     text-decoration: none;  /* <a>를 사용하면 밑줄이 쳐질수도 있음 밑줄 없애기 위해 적용 */
+    position: relative;
+    bottom:5px;
 }
 
 /* 자손 태그 선택하기 
@@ -72,7 +75,7 @@ display:none하면 스크린리더에도 안읽히기때문에 꼼수를 넣은 
 #search_window{
     display: inline-block;  /*  높이와 너비 지정 가능*/
     position: relative;  /* position:relative여야 하위에있는 버튼 position을 설정할 수 있다. */
-    height: 56px;
+    height: 55px;
     width: 586px;
     border: 2px solid #19ce60; /* hex color 표기법 */
     -webkit-border-radius: 2px;
@@ -89,18 +92,19 @@ display:none하면 스크린리더에도 안읽히기때문에 꼼수를 넣은 
     /* 클릭하면 나오는 테두리 button,input에 적용되어있음 :outline */
     outline: 0;
     width:444px;
+    height:24px;
     line-height: 24px;
     margin:1px;
     font-size: 18px;
     font-weight: 700;
     background-color: #fff;
-    display: inline-block;
+    vertical-align: top;
+    /* display: inline-block; */
     position:relative;
 }
 
 /* 검색 버튼 */
 .search_btn{
-
     width:56px;
     height:54px;
     background-color:#19ce60;
@@ -109,7 +113,7 @@ display:none하면 스크린리더에도 안읽히기때문에 꼼수를 넣은 
     border:none;
     padding:0;
     position:absolute;
-    top:0;
+    top:-1px;
     right:0;
 }
 /* 검색 버튼 안의 돋보기 이미지 */
